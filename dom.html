@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Methods Task</title>
+</head>
+<body>
+
+  <h2>DOM Events Example</h2>
+
+  <!-- Input Field -->
+  <input type="text" id="userText" placeholder="Type here...">
+  <p id="resultText"></p>
+
+  <!-- Button -->
+  <button id="myButton">Click Me</button>
+
+  <!-- Form -->
+  <form id="formData">
+    <input type="text" placeholder="Enter something" required>
+    <button type="submit">Submit</button>
+  </form>
+
+<script>
+  // 1. Show input value while typing
+  let inputBox = document.getElementById("userText");
+  let displayText = document.getElementById("resultText");
+
+  inputBox.addEventListener("input", function() {
+    displayText.innerText = inputBox.value;
+  });
+
+  // 2. Button click event
+  let button = document.getElementById("myButton");
+
+  button.addEventListener("click", function() {
+    alert("Button was clicked!");
+  });
+
+  // 3. Form submit event
+  let form = document.getElementById("formData");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Form submitted successfully!");
+  });
+</script>
+
+</body>
+</html>
